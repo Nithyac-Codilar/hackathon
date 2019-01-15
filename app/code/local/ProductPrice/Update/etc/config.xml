@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <ProductPrice_Update>
+            <version>0.0.2</version>
+        </ProductPrice_Update>
+    </modules>
+
+    <global>
+        <blocks>
+            <priceupdate>
+                <class>ProductPrice_Update_Block</class>
+            </priceupdate>
+        </blocks>
+        <helpers>
+            <priceupdate>
+                <class>ProductPrice_Update_Helper</class>
+            </priceupdate>
+        </helpers>
+    </global>
+
+    <admin>
+        <routers>
+            <priceupdate>
+                <use>admin</use>
+                <args>
+                    <module>ProductPrice_Update</module>
+                    <frontName>priceupdate</frontName>
+                </args>
+            </priceupdate>
+        </routers>
+    </admin>
+
+    <adminhtml>
+        <layout>
+            <updates>
+                <priceupdate>
+                    <file><!--priceupdate/priceupdate.xml--></file>
+                </priceupdate>
+            </updates>
+        </layout>
+    </adminhtml>
+</config>
